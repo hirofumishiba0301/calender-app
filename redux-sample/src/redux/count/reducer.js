@@ -1,4 +1,4 @@
-import { INCREMENT,DECREMENT } from "./constant.js";
+import { INCREMENT,DECREMENT } from "./constants.js";
 
 const initState = 0;
 
