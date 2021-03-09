@@ -2,12 +2,23 @@ import React from "react";
 
 import * as styles from "./style.css";
 
-const CalenderElement = ({ children }) => {
+import { Typography } from "@material-ui/core";
+
+
+const CalenderElement = ({ day }) => {
+  const isFirstDay = day.date() === 1;
+  const format = isFirstDay ? "M月D日" : "D";
   return (
     <div className={styles.element}>
-      <div className={styles.day}>{children}</div>
+      <Typography 
+      className={styles.date}
+      align="center"
+      variant="caption"
+      component="div"
+      >
+        {day.format("D")}
+      </Typography>
     </div>
-
   );
 };
 
